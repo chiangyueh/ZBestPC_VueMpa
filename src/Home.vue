@@ -7,7 +7,7 @@
 					<h1 class="fl"><a href="index.html"><img src="img/logo.png"/></a></h1>
 					<div class="fr clearfix" id="top1">
 						<p class="fl">
-							<a href="#" id="login">登录</a>
+							<router-link :to="{path : '/login'}" id="login">登录</router-link>
 							<a href="#" id="reg">注册</a>
 						</p>
 						<form action="#" method="get" class="fl">
