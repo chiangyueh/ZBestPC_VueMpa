@@ -7,7 +7,7 @@
 					<h1 class="fl"><a href="index.html"><img src="img/logo.png"/></a></h1>
 					<div class="fr clearfix" id="top1">
 						<p class="fl">
-							<router-link :to="{path : '/login'}" id="login">登录</router-link>
+							<a href="login.html" id="login">登录</a>
 							<a href="#" id="reg">注册</a>
 						</p>
 						<form action="#" method="get" class="fl">
@@ -406,12 +406,12 @@
 </template>
 
 <script>
-import './css/public.css'
-import './css/index.css'
+import '@/css/public.css'
+import '@/css/index.css'
 
 import 'jquery'
-import './js/public.js'
-import './js/nav.js'
+import '@/js/public.js'
+import '@/js/nav.js'
 export default {
 
 }

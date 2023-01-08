@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import './css/public.css'
-import './css/login.css'
+import '@/css/public.css'
+import '@/css/login.css'
 export default {
 }
 </script>

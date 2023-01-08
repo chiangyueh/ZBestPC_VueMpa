@@ -16,7 +16,8 @@ module.exports = {
     },
   },
   entry: {
-    index: "@/main.js",
+    home: "@/mpa/Home.js",
+    login: "@/mpa/Login.js"
   },
   output: {
     path: path.resolve(__dirname, "./dist"),
@@ -64,9 +65,14 @@ module.exports = {
       jQuery: "jquery",
     }),
     new HtmlWebpackPlugin({
-      filename: "index.html",
+      filename: "home.html",
       template: path.resolve(__dirname, "./public/index.html"),
-      chunks: ["index"],
+      chunks: ["home"],
+    }),
+    new HtmlWebpackPlugin({
+      filename: "login.html",
+      template: path.resolve(__dirname, "./public/index.html"),
+      chunks: ["login"],
     }),
     new CopyWebpackPlugin({
       patterns: [
@@ -81,6 +87,11 @@ module.exports = {
         chunkFilename : 'css/[name].chunk.css'
     }),
     new CleanWebpackPlugin(),
-    new VueLoaderPlugin(),
+    new VueLoaderPlugin()
   ],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
 };

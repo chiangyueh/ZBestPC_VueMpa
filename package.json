@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.vue.config.js",
-    "build": "webpack --config webpack.vue.config.js"
+    "start:mpa": "webpack-dev-server --config webpack.vue.mpa.config.js",
+    "build": "webpack --config webpack.vue.config.js",
+    "build:mpa": "webpack --config webpack.vue.mpa.config.js"
   },
   "keywords": [],
   "author": "",
