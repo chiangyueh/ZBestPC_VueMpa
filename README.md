@@ -15,12 +15,12 @@
 #項目操作參考
 Spa模式  
 npm start啟動webpack-dev-server  
-Url中輸入http://localhost:9000/#/home  
+Url中輸入http://localhost:9000/#/home    
 輸入npm run build時在dist目錄下可看到index.html入口文件
   
 
 Mpa模式
 npm start:mpa啟動webpack-dev-server  
-Url中輸入http://localhost:9000/#/home.html
+Url中輸入http://localhost:9000/#/home.html  
 輸入npm run build:mpa時在dist目錄下可看到此時index.html入口文件消失  
 並由home.html及login.html兩個文件替代
