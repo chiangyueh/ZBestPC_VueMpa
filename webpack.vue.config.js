@@ -5,8 +5,9 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 const CssMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin')
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
+
 module.exports = {
   mode: "development",
   entry: {
@@ -39,6 +40,14 @@ module.exports = {
         loader : 'vue-loader'
       }
     ],
+  },
+  devServer : {
+    static:{
+        directory : path.join(__dirname,'dist')
+    },
+    compress : true,
+    port : 9000,
+    hot : true,
   },
   optimization : {
     minimize : true,
