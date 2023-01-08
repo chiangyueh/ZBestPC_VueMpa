@@ -2,7 +2,9 @@ const path = require("path");
 const { ProvidePlugin } = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const TerserWebpackPlugin = require('terser-webpack-plugin');
+const CssMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin')
 module.exports = {
   mode: "development",
   entry: {
@@ -19,6 +21,10 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
     ],
+  },
+  optimization : {
+    minimize : true,
+    minimizer : [new TerserWebpackPlugin(), new CssMinimizerWebpackPlugin()]
   },
   plugins: [
     new ProvidePlugin({
